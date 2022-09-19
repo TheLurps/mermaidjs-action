@@ -1,12 +1,12 @@
 name: 'mermaidjs-action'
 description: 'Render mermaid diagrams'
 inputs:
-  input:
-    description: 'Input mermaid file. Files ending in .md will be treated as Markdown and all charts (e.g. ```mermaid (...)```) will be extracted and generated.'
+  file_pattern:
+    description: 'File pattern for input files'
     required: false
     default: '**/*.md'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.input }}
+    - ${{ inputs.file_pattern }}
