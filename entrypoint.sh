@@ -13,3 +13,10 @@ mkdir -p $(dirname "$GITHUB_WORKSPACE/$OUTPUT")
     --output "$GITHUB_WORKSPACE/$OUTPUT" \
     --backgroundColor "$BACKGROUNDCOLOR" \
     --theme "$THEME"
+
+git config --local user.name 'github-actions[bot]'
+git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+git config --local http.sslVerify false
+
+git add --all
+git commit -m "Update mermaid diagrams from $INPUT"
