@@ -1,5 +1,8 @@
 name: 'mermaidjs-action'
 description: 'Render mermaid diagrams'
+branding:
+  icon: box
+  color: purple
 inputs:
   input:
     description: 'Input mermaid file. Files ending in .md will be treated as Markdown and all charts (e.g. ```mermaid (...)```) will be extracted and generated.'
