@@ -1,0 +1,26 @@
+name: 'mermaidjs-action'
+description: 'Render mermaid diagrams'
+inputs:
+  input:
+    description: 'Input mermaid file. Files ending in .md will be treated as Markdown and all charts (e.g. ```mermaid (...)```) will be extracted and generated.'
+    required: true
+  output:
+    description: 'Output file. It should be either md, svg, png or pdf.'
+    required: false
+    default: 'mermaid.svg'
+  backgroundColor:
+    description: "Background color for pngs/svgs (not pdfs). Example: transparent, red, '#F0F0F0'."
+    required: false
+    default: 'transparent'
+  theme:
+    description: 'Theme of the chart, could be default, forest, dark or neutral.'
+    required: false
+    default: 'default'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.input }}
+    - ${{ inputs.output }}
+    - ${{ inputs.backgroundColor }}
+    - ${{ inputs.theme }} 
