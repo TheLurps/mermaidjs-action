@@ -5,7 +5,7 @@ OUTPUT="$2"
 BACKGROUNDCOLOR="$3"
 THEME="$4"
 
-mkdir -p "$GITHUB_WORKSPACE/$INPUT"
+mkdir -p $(dirname "$GITHUB_WORKSPACE/$OUTPUT")
 
 /home/mermaidcli/node_modules/.bin/mmdc \
     --puppeteerConfigFile /puppeteer-config.json \
