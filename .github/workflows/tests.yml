@@ -11,3 +11,4 @@ jobs:
       uses: ./
       with:
         input: 'examples.md'
+        output: 'img/examples.svg'
