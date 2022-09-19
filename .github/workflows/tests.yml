@@ -10,5 +10,4 @@ jobs:
     - name: Render mermaid diagrams
       uses: ./
       with:
-        files:
-          - 'examples.md'
+        input: 'examples.md'
