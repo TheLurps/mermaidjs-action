@@ -4,7 +4,7 @@ inputs:
   file_pattern:
     description: 'File pattern for input files'
     required: false
-    default: '**/*.md'
+    default: '*.md'
 runs:
   using: 'docker'
   image: 'Dockerfile'

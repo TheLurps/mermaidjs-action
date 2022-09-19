@@ -2,7 +2,7 @@
 
 FILE_PATTERN="$1"
 
-for INPUT_FILE in $(find / -wholename $FILE_PATTERN); do
+for INPUT_FILE in $(find /github/workspace -name $FILE_PATTERN); do
     /home/mermaidcli/node_modules/.bin/mmdc \
         --puppeteerConfigFile /puppeteer-config.json \
         --input $INPUT_FILE
