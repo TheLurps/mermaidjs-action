@@ -20,3 +20,4 @@ git config --local http.sslVerify false
 
 git add --all
 git commit -m "Update mermaid diagrams from $INPUT"
+git push

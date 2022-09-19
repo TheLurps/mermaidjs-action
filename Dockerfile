@@ -2,7 +2,8 @@ FROM ghcr.io/mermaid-js/mermaid-cli/mermaid-cli:9.1.6
 
 USER root
 RUN apk add --no-cache --update \
-    bash
+    bash \
+    git
 USER mermaidcli
 
 COPY entrypoint.sh /entrypoint.sh
