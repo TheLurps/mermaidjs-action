@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-mmdc --input $1
+./node_modules/.bin/mmdc \
+    --puppeteerConfigFile /puppeteer-config.json \
+    --input $1
